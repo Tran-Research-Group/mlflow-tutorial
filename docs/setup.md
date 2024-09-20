@@ -1,6 +1,6 @@
 # MLflow Tracking Environment Setup Guide
 
-## Setup Servers
+## Set-up Servers
 ### Storage Server
 In this setup, we will use Illinois Campus Cluster (ICC) to store the artifacts.
 
@@ -14,3 +14,7 @@ In this setup, we will use Illinois Campus Cluster (ICC) to store the artifacts.
 5. Run MLflow server on CLI by running 
    1. ```mlflow server --host 0.0.0.0 --port 8885 --artifacts-destination sftp://user@cc-xfer.campuscluster.illinois.edu/your/path/to/dir```
 6. Run `scripts/sklearn_example.py` to see if it correctly runs.
+
+## Run Containers
+1. Run `docker compose -f ./docker/local_server/docker-compose.yaml up`
+2. Connect to `http://0.0.0.0:5000`

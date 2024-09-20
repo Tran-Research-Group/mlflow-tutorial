@@ -36,7 +36,7 @@ services:
     build:
       context: ./tracking_server
       dockerfile: Dockerfile
-      environment:
+      args:
         - POSTGRES_USER=${POSTGRES_USER}
         - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
         - DB_HOST=${DB_HOST}
@@ -49,3 +49,5 @@ services:
     depends_on:
       - db-server
       - waitfordb
+    volumes:
+      - ~/.ssh:/root/.ssh
