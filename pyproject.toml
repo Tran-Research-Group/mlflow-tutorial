@@ -13,6 +13,11 @@ stable-baselines3 = "^2.3.2"
 gymnasium = "^0.29.1"
 pysftp = "^0.2.9"
 psutil = "^6.0.0"
+mlflow-rl-tools = { git = "https://github.com/miki-yuasa/mlflow-rl-tools.git", branch = "dev", extras = [
+    "sb3",
+] }
+imageio = "^2.35.1"
+pygame = "^2.6.0"
 
 
 [build-system]
